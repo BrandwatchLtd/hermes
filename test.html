@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script src="bower_components/requirejs/require.js"></script>
+    <script>
+      require.config({
+        paths: {
+          jquery: 'bower_components/jquery/dist/jquery',
+          chai: 'bower_components/chai/chai',
+          hermes: 'hermes'
+        }
+      });
+
+      mocha.ui('bdd');
+      mocha.reporter('html');
+
+      require(['test'], function () {
+        if (window.mochaPhantomJS) {
+          mochaPhantomJS.run();
+        } else {
+          mocha.run();
+        }
+      });
+    </script>
+  </body>
+</html>
