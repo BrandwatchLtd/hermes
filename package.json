@@ -1,6 +1,6 @@
 {
   "name": "hermes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Hermes is a barebones notification system, designed to work with css animations and transitions.",
   "main": "hermes.js",
   "scripts": {
