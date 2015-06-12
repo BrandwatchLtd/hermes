@@ -147,7 +147,6 @@
         };
     }
 
-
     // Configure and return a notifier object.
     function hermes(options) {
         var ul = document.createElement('ul');

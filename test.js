@@ -37,7 +37,6 @@ define(['hermes', 'chai'], function (hermes, chai) {
             });
         });
 
-
         describe('natural life cycle', function () {
             beforeEach(function () {
                 var container = document.createElement('div');
@@ -60,7 +59,7 @@ define(['hermes', 'chai'], function (hermes, chai) {
             });
 
             describe('a notification', function () {
-                it('should create a list item', function(){
+                it('should create a list item', function () {
                     this.notifier.success('hello world');
 
                     assert.equal(this.ul.children.length, 1);
