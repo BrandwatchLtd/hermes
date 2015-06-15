@@ -4,9 +4,10 @@
   "description": "Hermes is a barebones notification system, designed to work with css animations and transitions.",
   "main": "hermes.js",
   "scripts": {
-    "test": "npm run lint && npm run test-amd && npm run test-browserify",
+    "test": "npm run style && npm run lint && npm run test-amd && npm run test-browserify",
     "install": "bower install",
-    "lint": "eslint *.js",
+    "lint": "eslint hermes.js test.js test-browserify.js",
+    "style": "jscs hermes.js test.js test-browserify.js",
     "minify": "uglifyjs hermes.js --screw-ie8 -c -m -o hermes.min.js --source-map hermes.min.map",
     "test-amd": "mocha-phantomjs --reporter spec test.html",
     "test-browserify": "browserify test-browserify.js  | tape-run -b phantom"
@@ -36,7 +37,8 @@
   "devDependencies": {
     "bower": "1.3.8",
     "browserify": "4.2.3",
-    "eslint": "0.7.4",
+    "eslint": "0.22.1",
+    "jscs": "1.13.1",
     "mocha-phantomjs": "3.5.0",
     "phantomjs": "1.9.7-14",
     "tape": "2.13.4",
