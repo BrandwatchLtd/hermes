@@ -7,7 +7,7 @@
     "test": "npm run style && npm run lint && npm run test-js",
     "lint": "eslint hermes.js test/test.js",
     "style": "jscs hermes.js test/test.js",
-    "preversion": "uglifyjs hermes.js --screw-ie8 -c -m -o hermes.min.js --source-map hermes.min.map && git add hermes.min.*",
+    "minify": "uglifyjs hermes.js --screw-ie8 -c -m -o hermes.min.js --source-map hermes.min.map && git add hermes.min.*",
     "test-js": "mocha-phantomjs --reporter spec test/test.html"
   },
   "repository": {

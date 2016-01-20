@@ -1,0 +1,36 @@
+{
+  "name": "hermes-notifier",
+  "version": "0.1.2",
+  "authors": [
+    {
+      "name": "Mark Stanley Everitt",
+      "email": "mark.s.everitt@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BrandwatchLtd/hermes"
+  },
+  "description": "Hermes is a barebones notification system, designed to work with css animations and transitions.",
+  "main": "hermes.js",
+  "keywords": [
+    "notification",
+    "animation",
+    "transition",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc",
+    ".gitignore",
+    ".jscsrc",
+    ".travis.yml",
+    "CONTRIBUTING.md",
+    "package.json",
+    "test"
+  ]
+}
