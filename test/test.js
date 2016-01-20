@@ -7,7 +7,7 @@ describe('hermes', function () {
     var assert = chai.assert;
 
     describe('setup', function () {
-        it('should attach a list to the provided element', function () {
+        it('attaches a list to the provided element', function () {
             var container = document.createElement('div');
 
             hermes({ container: container, styles: {} });
@@ -15,14 +15,14 @@ describe('hermes', function () {
             assert.ok(container.children.item(0) instanceof window.HTMLUListElement);
         });
 
-        it('should apply listClasses to the generated list', function () {
+        it('applies listClasses to the generated list', function () {
             var container = document.createElement('div');
             hermes({ container: container, styles: {}, listClasses: ['test-class'] });
 
             assert.ok(container.children.item(0).classList.contains('test-class'));
         });
 
-        it('should return an object with given style fields', function () {
+        it('returns an object with given style fields', function () {
             var container = document.createElement('div');
 
             var notifier = hermes({
@@ -59,13 +59,13 @@ describe('hermes', function () {
         });
 
         describe('a notification', function () {
-            it('should create a list item', function () {
+            it('creates a list item', function () {
                 this.notifier.success('hello world');
 
                 assert.equal(this.ul.children.length, 1);
             });
 
-            it('should display the message', function () {
+            it('displays the message', function () {
                 this.notifier.success('hello world');
 
                 assert.equal(this.ul.children.item(0).textContent, 'hello world');
@@ -73,7 +73,7 @@ describe('hermes', function () {
         });
 
         describe('a notification list element', function () {
-            it('should begin with "shared" and "in" classes', function () {
+            it('begins with "shared" and "in" classes', function () {
                 this.notifier.success('hello world');
 
                 var notification = this.ul.children.item(0);
@@ -82,7 +82,7 @@ describe('hermes', function () {
                 assert.strictEqual(notification.classList.contains('notification-in'), true);
             });
 
-            it('should remove "in" and add "paused" class when in animation is done', function () {
+            it('removes "in" and add "paused" class when in animation is done', function () {
                 this.notifier.success('hello world');
 
                 var notification = this.ul.children.item(0);
@@ -98,7 +98,7 @@ describe('hermes', function () {
                 assert.strictEqual(notification.classList.contains('notification-paused'), true);
             });
 
-            it('should remove "paused" and add "out" class when pause is done', function (done) {
+            it('removes "paused" and add "out" class when pause is done', function (done) {
                 this.notifier.success('hello world');
 
                 var notification = this.ul.children.item(0);
@@ -117,7 +117,7 @@ describe('hermes', function () {
                 }, 20);
             });
 
-            it('should remove the notification when the out animation is done', function (done) {
+            it('removes the notification when the out animation is done', function (done) {
                 this.notifier.success('hello world');
 
                 var ul = this.ul;
@@ -164,7 +164,7 @@ describe('hermes', function () {
             this.ul = container.children.item(0);
         });
 
-        it('should cancel the earliest if there are one too many notifications', function () {
+        it('cancels the earliest if there are one too many notifications', function () {
             this.notifier.success('hello world');
 
             var firstNotification = this.ul.children.item(0);
@@ -180,7 +180,7 @@ describe('hermes', function () {
             assert.ok(!firstNotification.classList.contains('notification-paused'));
         });
 
-        it('should finish animation if cancelled whilst animating in', function () {
+        it('finishes animation if cancelled whilst animating in', function () {
             this.notifier.success('hello world');
 
             var firstNotification = this.ul.children.item(0);
@@ -197,7 +197,7 @@ describe('hermes', function () {
             assert.ok(firstNotification.classList.contains('notification-out'));
         });
 
-        it('should be unaffected if cancelled whilst animating out', function (done) {
+        it('is unaffected if cancelled whilst animating out', function (done) {
             var notifier = this.notifier;
 
             notifier.success('hello world');
