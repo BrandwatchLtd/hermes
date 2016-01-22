@@ -22,19 +22,15 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "bower_components",
     "node_modules",
+    ".editorconfig",
     ".eslintignore",
     ".eslintrc",
     ".gitignore",
+    ".jscsrc",
     ".travis.yml",
-    "test.js",
-    "test-browserify.js",
-    "test.html"
-  ],
-  "devDependencies": {
-    "mocha": "~1.20.1",
-    "chai": "~1.9.1",
-    "requirejs": "~2.1.0"
-  }
+    "CONTRIBUTING.md",
+    "package.json",
+    "test"
+  ]
 }

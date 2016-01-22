@@ -1,0 +1,10 @@
+{
+    "env": {
+        "mocha": true
+    },
+    "globals": {
+        "mocha": true,
+        "chai": true,
+        "hermes": true
+    }
+}
