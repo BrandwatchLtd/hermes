@@ -1,9 +1,8 @@
+'use strict';
+
 mocha.ui('bdd');
-mocha.reporter('html');
 
 describe('hermes', function () {
-    'use strict';
-
     var assert = chai.assert;
 
     describe('setup', function () {
@@ -225,8 +224,4 @@ describe('hermes', function () {
     });
 });
 
-if (window.mochaPhantomJS) {
-    window.mochaPhantomJS.run();
-} else {
-    mocha.run();
-}
+mocha.run();
