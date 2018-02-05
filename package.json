@@ -8,7 +8,7 @@
     "lint": "eslint hermes.js test/test.js",
     "style": "jscs hermes.js test/test.js",
     "minify": "uglifyjs hermes.js --screw-ie8 -c -m -o hermes.min.js --source-map hermes.min.map && git add hermes.min.*",
-    "test-js": "mocha-phantomjs --reporter spec test/test.html"
+    "test-js": "mocha-headless-chrome -a no-sandbox -f ./test/test.html -r tap"
   },
   "repository": {
     "type": "git",
@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/BrandwatchLtd/hermes",
   "devDependencies": {
-    "chai": "3.4.1",
-    "eslint": "0.22.1",
-    "jscs": "1.13.1",
-    "mocha": "2.3.4",
-    "mocha-phantomjs": "4.0.2",
-    "uglify-js": "2.4.15"
+    "chai": "^4.1",
+    "eslint": "^4.17",
+    "jscs": "^3.0",
+    "mocha": "^5.0",
+    "mocha-headless-chrome": "^1.8",
+    "uglify-js": "^3.3"
   }
 }
