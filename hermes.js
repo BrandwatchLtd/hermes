@@ -13,8 +13,9 @@
  */
 
 // IIFE to protect global scope.
-'use strict';
+/* eslint-disable strict */
 (function () {
+    'use strict';
     // Events that may be triggered when an animation or transition completes.
     var endEvents = [
         'animationend',
